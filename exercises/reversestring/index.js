@@ -14,26 +14,12 @@ function reverse(str) {
     return result;
 }
 
-function reverseByUsingArray(str) {
-    let arr = str.split('');
-    arr.reverse();
-    return arr.join('');
-}
-
 function reverseByUsingArrayShort(str) {
     return str.split('').reverse().join('');
 }
 
-function reverseByUsingForEach(str) {
-    let reversed = "";
-    for (let c of str) {
-        reversed += c;
-    }
-    return reversed;
-}
-
 function reverseByUsingReduce(str) {
-    return str.split('').reduce((char, rev) => char + rev, '');
+    return str.split('').reduce((a, b) => b + a, '');
 }
 
 module.exports = reverse;
